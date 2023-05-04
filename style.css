@@ -68,6 +68,7 @@ body {
     border: 1px solid rgba(255, 0, 0, 0.466);
     animation: shake 200ms 2 ease-in-out alternate backwards;
 }
+
 .main-signin__form input[type='password']:invalid:not(:focus) {
     border: 1px solid rgba(255, 0, 0, 0.466);
     animation: shake 200ms 2 ease-in-out alternate backwards;
@@ -89,7 +90,7 @@ body {
 .main-signin__form .main-signin__email span {
     position: absolute;
     left: 5%;
-    top: 20%;
+    top: 15%;
     color: #8c8c8c;
 
     transition: all 80ms ease-in-out;
@@ -98,21 +99,23 @@ body {
 .main-signin__form .main-signin__password span {
     position: absolute;
     left: 5%;
-    top: 20%;
+    top: 15%;
     color: #8c8c8c;
 
     transition: all 80ms ease-in-out;
 }
 
 .main-signin__email .main-signin__form--email:focus~span,
-.main-signin__email .main-signin__form--email:invalid~span {
+.main-signin__email .main-signin__form--email:invalid~span,
+.main-signin__email .main-signin__form--email:not(:placeholder-shown)~span {
     top: 0%;
     left: -2%;
     transform: scale(0.7);
 }
 
 .main-signin__password .main-signin__form--password:focus+span,
-.main-signin__password .main-signin__form--password:invalid+span {
+.main-signin__password .main-signin__form--password:invalid+span,
+.main-signin__password .main-signin__form--password:not(:placeholder-shown)~span {
     top: 0%;
     left: 3%;
     transform: scale(0.7);
@@ -234,7 +237,7 @@ body {
     background-color: black;
     padding: 0.5rem;
     outline: none;
-    border: 2px solid white;
+    border: 1px solid 737373;
     border-radius: 4px;
     cursor: pointer;
     margin-top: 1rem;
@@ -251,5 +254,45 @@ body {
 
     100% {
         transform: translateX(3px);
+    }
+}
+
+@media (max-width:40rem) {
+    .background-image {
+        background: black;
+    }
+
+    .main-signin-container {
+        padding: 0 1rem;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-signin__form .main-signin__form--entrar {
+        margin-top: 1.5rem;
+        border-radius: 3px;
+    }
+
+    .main-signin__form {
+        gap: 1rem;
+    }
+
+    .main-footer__container {
+        margin: 0;
+        border-top: 1px solid #737373;
+    }
+
+    .main-header__logo--svg {
+        width: 100px;
+        height: 70px;
+        filter: brightness(110%);
+    }
+    .main-signin__form {
+        margin-bottom: 2rem;
+    }
+
+    .main-signin-info {
+        margin-bottom: 6rem;
     }
 }
