@@ -29,7 +29,6 @@ body {
     z-index: -1;
 }
 
-
 .main-signin-container {
     margin: auto;
     width: 27rem;
@@ -65,6 +64,15 @@ body {
     font-size: 1.2rem;
 }
 
+.main-signin__form input[type='email']:invalid:not(:focus) {
+    border: 1px solid rgba(255, 0, 0, 0.466);
+    animation: shake 200ms 2 ease-in-out alternate backwards;
+}
+.main-signin__form input[type='password']:invalid:not(:focus) {
+    border: 1px solid rgba(255, 0, 0, 0.466);
+    animation: shake 200ms 2 ease-in-out alternate backwards;
+}
+
 .main-signin__form input[type='email']:focus,
 .main-signin__form input[type='password']:focus {
     background-color: #454545;
@@ -81,7 +89,7 @@ body {
 .main-signin__form .main-signin__email span {
     position: absolute;
     left: 5%;
-    top: 30%;
+    top: 20%;
     color: #8c8c8c;
 
     transition: all 80ms ease-in-out;
@@ -90,19 +98,21 @@ body {
 .main-signin__form .main-signin__password span {
     position: absolute;
     left: 5%;
-    top: 30%;
+    top: 20%;
     color: #8c8c8c;
 
     transition: all 80ms ease-in-out;
 }
 
-.main-signin__email .main-signin__form--email:focus~span {
+.main-signin__email .main-signin__form--email:focus~span,
+.main-signin__email .main-signin__form--email:invalid~span {
     top: 0%;
     left: -2%;
     transform: scale(0.7);
 }
 
-.main-signin__password .main-signin__form--password:focus+span {
+.main-signin__password .main-signin__form--password:focus+span,
+.main-signin__password .main-signin__form--password:invalid+span {
     top: 0%;
     left: 3%;
     transform: scale(0.7);
@@ -181,4 +191,65 @@ body {
 
 .main-signin-info .main-signin-info__learn>a:hover {
     text-decoration: underline;
+}
+
+.main-footer__container {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+.main-footer__container>header>h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    color: #737373;
+    margin-bottom: 1rem;
+}
+
+.main-footer__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.main-footer__list>li {
+    width: 200px;
+    margin-bottom: 0.5rem;
+}
+
+.main-footer__list li>a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 100;
+
+    color: #737373;
+    text-decoration: none;
+}
+
+.main-footer__select select {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #737373;
+    background-color: black;
+    padding: 0.5rem;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateX(-3px);
+    }
+
+    100% {
+        transform: translateX(3px);
+    }
 }

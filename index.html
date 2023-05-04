@@ -35,10 +35,10 @@
                     <span for="email">Email or phone number</span>
                 </div>
                 <div class="main-signin__password">
-                    <input type="password" class="main-signin__form--password">
+                    <input type="password" minlength="6" class="main-signin__form--password">
                     <span for="password">Password</span>
                 </div>
-                
+
                 <button type="submit" class="main-signin__form--entrar">Sign In</button>
 
                 <section class="main-signin__form--remember">
@@ -67,8 +67,23 @@
 
     </main>
     <footer>
-        <section>
-            <h1>hahahaha</h1>
+        <section class="main-footer__container">
+            <header>
+                <h1>Duvidas? Ligue: 0800 000 000</h1>
+            </header>
+            <ul class="main-footer__list">
+                <li><a href="#">Perguntas frequentes</a></li>
+                <li><a href="#">Central de ajuda</a></li>
+                <li><a href="#">Termos de uso</a></li>
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Preferências de cookies</a></li>
+                <li><a href="#">Informações corporativas</a></li>
+            </ul>
+            <div class="main-footer__select">
+                <select name="country" id="country">
+                    <option value="Portuguese">Portuguese</option>
+                </select>
+            </div>
         </section>
     </footer>
 </body>
