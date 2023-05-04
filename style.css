@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 5rem auto fit-content(10rem);
+    grid-template-areas: "header"
+        "main"
+        "footer";
+}
+
+.background-image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/background-netflix.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: border-box;
+    background-origin: border-box;
+
+    filter: brightness(45%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+.main-signin-container {
+    margin: auto;
+    width: 27rem;
+    height: 43rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 4rem;
+}
+
+.main-signin__form {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.main-signin__form .main-signin__form--header {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.main-signin__form input[type='email'],
+.main-signin__form input[type='password'] {
+    caret-color: #fff;
+    background-color: rgb(51, 51, 51);
+    border-radius: 6px;
+    padding: 1.3rem 1.3rem 0.5rem 1.3rem;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.2rem;
+}
+
+.main-signin__form input[type='email']:focus,
+.main-signin__form input[type='password']:focus {
+    background-color: #454545;
+}
+
+.main-signin__email {
+    position: relative;
+}
+
+.main-signin__password {
+    position: relative;
+}
+
+.main-signin__form .main-signin__email span {
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    color: #8c8c8c;
+
+    transition: all 80ms ease-in-out;
+}
+
+.main-signin__form .main-signin__password span {
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    color: #8c8c8c;
+
+    transition: all 80ms ease-in-out;
+}
+
+.main-signin__email .main-signin__form--email:focus~span {
+    top: 0%;
+    left: -2%;
+    transform: scale(0.7);
+}
+
+.main-signin__password .main-signin__form--password:focus+span {
+    top: 0%;
+    left: 3%;
+    transform: scale(0.7);
+}
+
+.main-signin__form .main-signin__form--entrar {
+    margin-top: 4rem;
+    padding: 1rem 0;
+    border: none;
+    border-radius: 6px;
+    background-color: #e50914;
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main-signin__form--remember {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-signin__form--remember input[type='checkbox'] {
+    background: #454545;
+    border-radius: 2px;
+    width: 1rem;
+    aspect-ratio: 1/1;
+    appearance: none;
+    vertical-align: middle;
+}
+
+.main-signin__form--remember input[type='checkbox']:checked {
+    background-color: #e5091487;
+}
+
+.main-signin__form--remember label {
+    color: #b3b3b3;
+    vertical-align: middle;
+    font-size: 0.8rem;
+}
+
+.main-signin__form--remember #help {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.main-signin-info .main-signin-info__sighup {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #737373;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 1rem;
+}
+
+.main-signin-info .main-signin-info__sighup>a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.main-signin-info .main-signin-info__learn {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #737373;
+}
+
+.main-signin-info .main-signin-info__learn>a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0071eb;
+    text-decoration: none;
+}
+
+.main-signin-info .main-signin-info__learn>a:hover {
+    text-decoration: underline;
+}
