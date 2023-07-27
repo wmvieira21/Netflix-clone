@@ -2,8 +2,11 @@
 
 Cloned the <strong>https://www.netflix.com/br-en/login</strong> (desktop and mobile version) webpage with CSS .
 
-Main concepts aplied: Grid and Flexbox. Focused on the mobile version.
+## Main concepts applied
+- Grid
+- Flexbox.
 
+Focused on the mobile version.
 
 Check it out;
 https://wmvieira21.github.io/Netflix-clone/
